@@ -1,11 +1,18 @@
+import React, { useState } from 'react'
 import './App.css';
 import Square from './Square';
 
 function App() {
-  const propVariable = "this is a prop"
+  const [squares, setSquares] = useState(["", "", "", "", "", "", "", "", "",])
+  const [player, setPlayer] = useState(true)
+
   return (
     <div className="App">
-      <Square propVar={propVariable}/>
+      <Square
+        squares={squares}
+        setSquares={setSquares}
+        player={player}
+        setPlayer={setPlayer} />
     </div>
   );
 }
